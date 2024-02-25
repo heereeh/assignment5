@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-slate-100 text-sm;
+  }
+
+  h3 {
+    @apply text-lg font-bold;
+  }
+
+  *::-webkit-scrollbar {
+    @apply absolute top-0 right-0 w-1;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply h-1/3 bg-white/50 rounded-md;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg; /*스크롤바 뒷 배경 색상*/
+  }
+}
+
+@layer components {
+  .bg {
+    @apply bg-slate-800;
+  }
+
+  .bg-darker {
+    @apply bg-slate-900;
+  }
+
+  .bg-lighter {
+    @apply bg-slate-100 text-slate-900;
+  }
+
+  .text {
+    @apply text-slate-100;
+  }
+
+  .text-lighter {
+    @apply text-white;
+  }
+
+  .text-darker {
+    @apply text-slate-200;
+  }
+
+  .text-primary {
+    @apply text-red-600;
+  }
+
+  button.round-icon {
+    @apply w-10 h-10 fill-slate-100 border-2 border-slate-400 hover:border-white rounded-full p-2;
+  }
+
+  button.primary {
+    @apply bg-slate-100 text-slate-900 text-base font-bold px-6 py-2 rounded-md hover:bg-slate-100/70;
+  }
+
+  button.secondary {
+    @apply bg-slate-500/50 text-slate-100 text-base font-bold px-6 py-2 rounded-md hover:bg-slate-500/20;
+  }
+}
