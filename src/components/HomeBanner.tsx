@@ -26,7 +26,9 @@ function HomeBanner({ item }: IProps) {
         {item && (
           <>
             <h2 className="text-6xl mb-5">{item.title ?? item.name}</h2>
-            <div className="w-1/2 max-w-[40rem]">{item.overview}</div>
+            <div className="w-1/2 max-w-[40rem] line-clamp-3">
+              {item.overview}
+            </div>
             <div className="mt-3 space-x-2">
               <button className="primary self-start">Play</button>
               <motion.button
